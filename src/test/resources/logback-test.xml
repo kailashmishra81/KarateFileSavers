@@ -1,0 +1,15 @@
+<configuration>
+    <!-- Suppress DEBUG logs from Apache HttpClient and Thymeleaf -->
+    <logger name="org.apache.http" level="WARN"/>
+    <logger name="org.thymeleaf" level="WARN"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+</configuration>
